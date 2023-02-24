@@ -2,6 +2,7 @@
 
 # dependencies
 context/node_modules
+hooksapp/node_modules
 context/.pnp
 .pnp.js
 
