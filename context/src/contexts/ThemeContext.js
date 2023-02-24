@@ -9,10 +9,18 @@ function ThemeContextProvider(props) {
     dark: { syntax: "#ddd", ui: "#333", bg: "#555" },
   });
 
+ const toggleTheme = () => {
+   setState({ ...state, isLightTheme: !state.isLightTheme });
+ };
+
+
+  
+
   return (
-    <ThemeContext.Provider value={state}>
-      {props.children}
-    </ThemeContext.Provider>
+   <ThemeContext.Provider value={{ state, toggleTheme }}>
+  {props.children}
+</ThemeContext.Provider>
+
   );
 }
 
